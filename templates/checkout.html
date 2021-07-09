@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+</head>
+<body>
+<form action="/checkout" method="POST">
+    Product: <select name="product">
+      {% for row in products %}
+        <option value="{{row[0]}}"> {{row[1]}} </option>
+      {% endfor %}
+    </select> <br><br>
+    Transaction_date: <input type="date" name="transaction date"> <br><br>
+    Amount: <select name="product">
+        {% for row in products %}
+            <option value="{{row[0]}}"> {{row[2]}}</option>
+        {% endfor %}
+    </select> <br><br>
+    Account No: <input type="text" name="ac number"> <br><br>
+    cvv: <input type="text" name="cvv"> <br><br>
+    <input type="submit" value="Press to place the order"> <br><br>
+</form>
+
+</body>
+</html>
